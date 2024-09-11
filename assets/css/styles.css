@@ -261,7 +261,7 @@
   position: fixed;
   z-index: 2;
   width: 80%;
-  top: 100px;
+  top: 65px;
   /* top: calc(100vh - 15px); */
   left: 10%;
   transition-duration: 0.6s;
@@ -271,16 +271,16 @@
   width: auto;
   list-style: none;
   position: absolute;
-  top: 50px;
+  top: 55px;
   right: 0;
   background-color: var(--page-bg-color);
   padding: 0;
-  z-index: 5;
+  z-index: 1;
 }
 
 .thumbnail_li {
   width: 70px !important;
-  height: 35px;
+  height: 53px;
   display: inline-block;
   vertical-align: top;
   border: 1px solid var(--card-border);
@@ -289,7 +289,11 @@
 .thumbnail_li a {
   width: 100%;
   display: block;
-  height: 50px;
+  height: 53px;
+}
+
+.thumbnail_li a img {
+  height: 45px;
 }
 
 .btn-submit {
@@ -349,6 +353,10 @@ iframe {
 .expandedCard .paramname {
   max-height: 500px;
   overflow: auto;
+}
+
+.stopBtn {
+  width: 180px !important;
 }
 
 @media only screen and (max-width: 426px) {

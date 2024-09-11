@@ -18794,7 +18794,7 @@ input#checkAll.form-check-input:checked {
   line-height: 1.7;
   font-size: 0.9rem;
   border-color: var(--border);
-  height: 2.813rem;
+  height: 2.313rem;
   border-radius: 0.5rem; }
   .form-control::placeholder {
     color: #888888; }
