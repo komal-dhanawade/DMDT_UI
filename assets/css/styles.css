@@ -1,0 +1,396 @@
+:root,[data-theme-version="light"] {
+    --page-bg-color: #e8e8ea;
+    --header-bg-color: #e8e8ea;
+    --font-color: #333333;
+    --card: #fff;
+    --bs-body-bg: #fff;
+    --map-icon-color: #3e4095;
+    --themeChange: #e8e8ea;
+    --icon-dark: #18181a;
+    --icon-light: #e8e8ea;
+    --menu-bg: #f7f7f7;
+    --card-border: #cfcfcf;
+    --button-color: #fff;
+    --button-bg: #252685;
+    --btn-outline-submit: #3e4095;
+  }
+  [data-theme-version="dark"] {
+    --page-bg-color: #18181a;
+    --header-bg-color: #18181a;
+    --font-color: #fff;
+    --bs-body-bg: #212529;
+    --map-icon-color: #e8e8ea;
+    --themeChange: #3e4095;
+    --icon-dark: #e8e8ea;
+    --icon-light: #060606;
+    --menu-bg: #212529;
+    --card-border: #636262;
+    --button-color: #333333;
+    --button-bg: #e8e8ea;
+    --btn-outline-submit: #3e4095;
+  }
+
+
+
+
+
+
+  body {
+    font-family: sans-serif;
+    background-color: var(--body-bg);
+    color: var(--font-color);
+  }
+
+  h1 {
+    color:  var(--font-color);
+  }
+  h2 {
+    color:  var(--font-color);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  select {
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+  }
+
+  .form-control, .form-control:focus {
+    color: var(--font-color);
+    border: 1px solid #aaaaaa73;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+    background-color: var(--headerbg);
+    z-index: 5;
+  }
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--font-color);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color:  var(--font-color);
+  }
+  
+  .logo a span {
+    color:  var(--font-color);
+  }
+
+  #themeChange {
+    background-color: var(--themeChange) !important;
+  }
+
+  #icon-light {
+    color: var(--icon-light);
+  }
+
+  #icon-dark {
+    color: var(--icon-dark);
+  }
+
+  [data-theme-version="dark"] #icon-light {
+    display: inline;
+  }
+  [data-theme-version="dark"] #icon-dark {
+    display: none;
+  }
+  [data-theme-version="light"] #icon-light {
+    display: none;
+  }
+  [data-theme-version="light"] #icon-dark {
+    display: inline;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .menu a {
+    display: block;
+    padding: 6px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color:  var(--font-color);
+  }
+
+  .menu li:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .menu:hover a {
+    opacity: 0.4;
+  }
+  
+  .menu a:hover {
+    opacity: 1;
+    color:  var(--font-color);
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+  }
+
+  label {
+    color:  var(--font-color);
+  }
+
+    iframe img {
+      width: 100vw !important;
+      height: 100vh !important;
+    }
+  .card {
+    border: 1px solid var(--card-border);
+  }
+  .card-header {
+    width: 100%;
+    display: block;
+  }
+  .mapIcon{
+    width: auto;
+    float: right;
+    display: block;
+    margin-bottom: 0 !important;
+  }
+  .mapIcon li{
+    width: 30px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 2px 5px;
+    cursor: pointer;
+  }
+
+  .mapIcon li span {
+    font-size: 18px !important;
+    color: var(--map-icon-color);
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+.thermometer {
+  width: 16px;
+  height: 122px;
+  background-color: #f1f1f1;
+  border-radius: 30px;  
+  position: relative;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+  margin: 0px auto;
+}
+
+.thermometer .mercury {
+  width: 100%;
+  height: 0;
+  background-color: #008000;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.3s ease-in-out;
+}
+
+.thermometer .mercury2 {
+  width: 100%;
+  height: 0;
+  background-color: #d10303;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.3s ease-in-out;
+}
+
+.thermometer .bulb {
+  width: 35px;
+  height: 34px;
+  background-color: #008000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.thermometer .bulb2 {
+  width: 35px;
+  height: 34px;
+  background-color: #d10303;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.expandedCard {
+  position: fixed;
+  z-index: 2;
+  width: 80%;
+  top: 100px;
+  /* top: calc(100vh - 15px); */
+  left: 10%;
+  transition-duration: 0.6s;
+}
+
+.thumbnail_ul {
+  width: auto;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: var(--page-bg-color);
+  padding: 0;
+  z-index: 5;
+}
+
+.thumbnail_li {
+  width: 70px !important;
+  height: 35px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid var(--card-border);
+}
+
+.thumbnail_li a {
+  width: 100%;
+  display: block;
+  height: 50px;
+}
+
+.btn-submit {
+  background-color: var(--map-icon-color);
+  color: var(--button-color) !important;
+  padding: 9px 21px;
+}
+
+.btn-submit:hover {
+  background-color: var(--button-bg);
+}
+
+input[type=file]::file-selector-button {
+  background-color: var(--map-icon-color);
+  color: var(--button-color);
+}
+
+.btn-outline-submit {
+  border: 1px solid var(--btn-outline-submit);
+  color: var(--btn-outline-submit);
+}
+
+.btn-outline-submit:hover {
+  background-color: var(--btn-outline-submit);
+  color: #fff;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/*.iframe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; !* or 'contain' if you want to fit the whole image *!
+}*/
+
+.allObject{
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+.paramname {
+  max-height: 400px;
+  overflow: auto;
+}
+.expandedCard .paramname {
+  max-height: 500px;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 426px) {
+  .allObject{
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+  @media only screen and (max-width: 950px) {
+    .menu {
+      flex-direction: column;
+      background-color: #151418;
+      align-items: start;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+  
+    .menu a {
+      margin-left: 12px;
+    }
+  
+    .menu li {
+      margin-bottom: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+      color:  var(--font-color);
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+
+

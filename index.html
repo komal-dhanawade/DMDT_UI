@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>DMDT</title>
+  <base href="https://komal-dhanawade.github.io/DMDT_UI/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">   
+  <style>@-webkit-keyframes bs-notify-fadeOut{0%{opacity:.9}100%{opacity:0}}</style><link href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css"></noscript>
+	<style>:root{--swiper-theme-color:#007aff}</style><link href="assets/vendor/swiper/css/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"></noscript>
+	<style>:root{--dt-row-selected:13, 110, 253;--dt-row-selected-text:255, 255, 255;--dt-row-selected-link:9, 10, 11;--dt-row-stripe:0, 0, 0;--dt-row-hover:0, 0, 0;--dt-column-ordering:0, 0, 0;--dt-html-background:white}</style><link href="assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/vendor/datatables/css/jquery.dataTables.min.css"></noscript>
+	<style>@-webkit-keyframes dtb-spinner{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><link href="assets/vendor/datatables/css/buttons.dataTables.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/vendor/datatables/css/buttons.dataTables.min.css"></noscript>
+	<link href="assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"></noscript> 
+  <style>@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&amp;display=swap");@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");@import url("../icons/fontawesome/css/all.min.css");@import url("../icons/material-design-iconic-font/css/materialdesignicons.min.css");@import url("../icons/themify-icons/css/themify-icons.css");@import url("../icons/line-awesome/css/line-awesome.min.css");@import url("../icons/flaticon/flaticon.css");@import url("../icons/flaticon_1/flaticon_1.css");@import url("../icons/bootstrap-icons/font/bootstrap-icons.css");@import url(../vendor/metismenu/css/metisMenu.min.css);@use "sass:math";:root{--primary:#452B90;--secondary:#F8B940;--secondary-dark:#f6a70f;--primary-hover:#321f69;--primary-dark:#0d081a;--rgba-primary-1:rgba(69, 43, 144, 0.1);--rgba-primary-2:rgba(69, 43, 144, 0.2);--rgba-primary-3:rgba(69, 43, 144, 0.3);--rgba-primary-4:rgba(69, 43, 144, 0.4);--rgba-primary-5:rgba(69, 43, 144, 0.5);--rgba-primary-6:rgba(69, 43, 144, 0.6);--rgba-primary-7:rgba(69, 43, 144, 0.7);--rgba-primary-8:rgba(69, 43, 144, 0.8);--rgba-primary-9:rgba(69, 43, 144, 0.9);--rgba-secondary-1:rgba(248, 185, 64, 0.1);--rgba-secondary-2:rgba(248, 185, 64, 0.2);--rgba-secondary-3:rgba(248, 185, 64, 0.3);--rgba-secondary-4:rgba(248, 185, 64, 0.4);--rgba-secondary-5:rgba(248, 185, 64, 0.5);--rgba-secondary-6:rgba(248, 185, 64, 0.6);--rgba-secondary-7:rgba(248, 185, 64, 0.7);--rgba-secondary-8:rgba(248, 185, 64, 0.8);--rgba-secondary-9:rgba(248, 185, 64, 0.9);--font-family-base:poppins, sans-serif, sans-serif;--font-family-title:poppins, sans-serif, sans-serif;--title:#374557;--dz-sidebar-width:15rem;--dz-header-height:4.375rem;--dz-sidebar-pos:absolute;--dz-header-pos:relative;--dz-side-nav-padding:.85rem 1.5rem;--dz-side-nav-margin:0 0;--dz-side-nav-size:0.875rem;--dz-side-ico-size:1.2rem;--dz-side-ico-height:auto;--dz-side-ico-width:auto;--dz-side-sub_nav-padding:.4rem 1rem .4rem 3.6rem;--dz-side-sub_nav-size:0.85rem;--dz-head-title-size:1.25rem;--dz-side-menu-direction:column;--dz-side-menu-padding:0 0;--dz-side-profile:block;--dz-side-info:block;--dz-side-copyright:block;--dz-list-space-x:1.25rem;--dz-list-space-y:.5rem;--dz-list-size:.875rem}:root{--card:#fff;--text-dark:#312a2a;--text-gray:#737B8B;--text:#7e7e7e;--body-bg:#F3F0EC;--light:#F3F0EC;--border:#dad8d4;--bs-border-color:#dad8d4}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#BB6BD9;--bs-pink:#e83e8c;--bs-red:#EE3232;--bs-orange:#ff9900;--bs-yellow:#FFFF00;--bs-green:#297F00;--bs-teal:#20c997;--bs-cyan:#3065D0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#452B90;--bs-secondary:#F8B940;--bs-success:#3A9B94;--bs-info:#58bad7;--bs-warning:#FF9F00;--bs-danger:#FF5E5E;--bs-light:#e7e7e7;--bs-dark:#6e6e6e;--bs-primary-rgb:69, 43, 144;--bs-secondary-rgb:248, 185, 64;--bs-success-rgb:58, 155, 148;--bs-info-rgb:88, 186, 215;--bs-warning-rgb:255, 159, 0;--bs-danger-rgb:255, 94, 94;--bs-light-rgb:231, 231, 231;--bs-dark-rgb:110, 110, 110;--bs-primary-text-emphasis:#1c113a;--bs-secondary-text-emphasis:#634a1a;--bs-success-text-emphasis:#173e3b;--bs-info-text-emphasis:#234a56;--bs-warning-text-emphasis:#664000;--bs-danger-text-emphasis:#662626;--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:#dad5e9;--bs-secondary-bg-subtle:#fef1d9;--bs-success-bg-subtle:#d8ebea;--bs-info-bg-subtle:#def1f7;--bs-warning-bg-subtle:#ffeccc;--bs-danger-bg-subtle:#ffdfdf;--bs-light-bg-subtle:#fcfcfd;--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:#b5aad3;--bs-secondary-border-subtle:#fce3b3;--bs-success-border-subtle:#b0d7d4;--bs-info-border-subtle:#bce3ef;--bs-warning-border-subtle:#ffd999;--bs-danger-border-subtle:#ffbfbf;--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));--bs-body-font-family:"poppins", sans-serif, sans-serif;--bs-body-font-size:0.875rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#888888;--bs-body-color-rgb:136, 136, 136;--bs-body-bg:#F3F0EC;--bs-body-bg-rgb:243, 240, 236;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0, 0, 0;--bs-secondary-color:rgba(136, 136, 136, 0.75);--bs-secondary-color-rgb:136, 136, 136;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233, 236, 239;--bs-tertiary-color:rgba(136, 136, 136, 0.5);--bs-tertiary-color-rgb:136, 136, 136;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248, 249, 250;--bs-heading-color:#374557;--bs-link-color:#452B90;--bs-link-color-rgb:69, 43, 144;--bs-link-decoration:underline;--bs-link-hover-color:#372273;--bs-link-hover-color-rgb:55, 34, 115;--bs-code-color:#e83e8c;--bs-highlight-bg:#ffffcc;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#CCCCCC;--bs-border-color-translucent:rgba(0, 0, 0, 0.175);--bs-border-radius:0.75rem;--bs-border-radius-sm:0.25rem;--bs-border-radius-lg:0.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);--bs-box-shadow-sm:0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, 0.175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, 0.075);--bs-focus-ring-width:0.25rem;--bs-focus-ring-opacity:0.25;--bs-focus-ring-color:rgba(69, 43, 144, 0.25);--bs-form-valid-color:#3A9B94;--bs-form-valid-border-color:#3A9B94;--bs-form-invalid-color:#FF5E5E;--bs-form-invalid-border-color:#FF5E5E}*,*::before,*::after{box-sizing:border-box}@media (prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1440}*{outline:none;padding:0}*::after{margin:0;padding:0}*::before{margin:0;padding:0}@media only screen and (max-width: 100rem){:root{font-size:14px}}body{-ms-overflow-style:none;scrollbar-width:none;background-color:var(--body-bg)}body::-webkit-scrollbar{display:none}@-webkit-keyframes crescendo{from{-webkit-transform:translateY(5px) scale(0.8);-ms-transform:translateY(5px) scale(0.8);transform:translateY(5px) scale(0.8)}to{-webkit-transform:translateY(0px) scale(1);-ms-transform:translateY(0px) scale(1);transform:translateY(0px) scale(1)}}@-webkit-keyframes bounce{0%{transform:translateX(-8%);-webkit-transform:translateX(-8%)}50%{transform:translateX(8%);-webkit-transform:translateX(8%)}100%{transform:translateY(-8%);-webkit-transform:translateY(-8%)}}:root{--nav-headbg:#FFFFFF;--sidebar-bg:#FFFFFF;--headerbg:#F3F0EC}body > *{scrollbar-width:thin;scrollbar-color:rgba(111, 133, 147, 0.1) #fff0}@-webkit-keyframes mymove{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes shine{100%{left:125%}}</style><link href="assets/css/style.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+  <link href="assets/css/fontawesome.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/fontawesome.min.css"></noscript>
+  <style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-primary-text-emphasis:#052c65;--bs-secondary-text-emphasis:#2b2f32;--bs-success-text-emphasis:#0a3622;--bs-info-text-emphasis:#055160;--bs-warning-text-emphasis:#664d03;--bs-danger-text-emphasis:#58151c;--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:#cfe2ff;--bs-secondary-bg-subtle:#e2e3e5;--bs-success-bg-subtle:#d1e7dd;--bs-info-bg-subtle:#cff4fc;--bs-warning-bg-subtle:#fff3cd;--bs-danger-bg-subtle:#f8d7da;--bs-light-bg-subtle:#fcfcfd;--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:#9ec5fe;--bs-secondary-border-subtle:#c4c8cb;--bs-success-border-subtle:#a3cfbb;--bs-info-border-subtle:#9eeaf9;--bs-warning-border-subtle:#ffe69c;--bs-danger-border-subtle:#f1aeb5;--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-color-rgb:33,37,41;--bs-body-bg:#fff;--bs-body-bg-rgb:255,255,255;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0,0,0;--bs-secondary-color:rgba(33, 37, 41, 0.75);--bs-secondary-color-rgb:33,37,41;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233,236,239;--bs-tertiary-color:rgba(33, 37, 41, 0.5);--bs-tertiary-color-rgb:33,37,41;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248,249,250;--bs-heading-color:inherit;--bs-link-color:#0d6efd;--bs-link-color-rgb:13,110,253;--bs-link-decoration:underline;--bs-link-hover-color:#0a58ca;--bs-link-hover-color-rgb:10,88,202;--bs-code-color:#d63384;--bs-highlight-color:#212529;--bs-highlight-bg:#fff3cd;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, 0.175);--bs-border-radius:0.375rem;--bs-border-radius-sm:0.25rem;--bs-border-radius-lg:0.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);--bs-box-shadow-sm:0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, 0.175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, 0.075);--bs-focus-ring-width:0.25rem;--bs-focus-ring-opacity:0.25;--bs-focus-ring-color:rgba(13, 110, 253, 0.25);--bs-form-valid-color:#198754;--bs-form-valid-border-color:#198754;--bs-form-invalid-color:#dc3545;--bs-form-invalid-border-color:#dc3545}*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1400px}</style><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
+  <style>:root,[data-theme-version="light"]{--page-bg-color:#e8e8ea;--header-bg-color:#e8e8ea;--font-color:#333333;--card:#fff;--bs-body-bg:#fff;--map-icon-color:#3e4095;--themeChange:#e8e8ea;--icon-dark:#18181a;--icon-light:#e8e8ea;--menu-bg:#f7f7f7;--card-border:#cfcfcf;--button-color:#fff;--button-bg:#252685;--btn-outline-submit:#3e4095}body{font-family:sans-serif;background-color:var(--body-bg);color:var(--font-color)}</style><link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+  <style>@charset "UTF-8"</style><link href="assets/css/metisMenu.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/css/metisMenu.css"></noscript>
+  <!-- <link href="assets/css/style-rtl.css" rel="stylesheet" type="text/css" > -->
+<style>:root{--swiper-theme-color:#007aff}:root{--dt-row-selected:13, 110, 253;--dt-row-selected-text:255, 255, 255;--dt-row-selected-link:9, 10, 11;--dt-row-stripe:0, 0, 0;--dt-row-hover:0, 0, 0;--dt-column-ordering:0, 0, 0;--dt-html-background:white}</style><link rel="stylesheet" href="styles.eaff119269ec63c0.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.eaff119269ec63c0.css"></noscript></head>
+<body data-theme-version="light" id="body">
+  <app-root></app-root>
+  <script src="assets/js/jquery.min.js"></script>
+<script src="runtime.114b49c542f49392.js" type="module"></script><script src="polyfills.259536bfcd35550b.js" type="module"></script><script src="scripts.5c83cbb4dbb11a83.js" defer></script><script src="main.0241cf70ff637a27.js" type="module"></script></body>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script>
+//   function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show");
+// }
+
+
+$(document).ready(function(){
+  $('.dropdown').hide();
+  $('.hamburger').on('click', function(event) {
+    $('#navDropdownMenu').slideToggle();
+    event.stopPropagation(); // Prevents the click from bubbling up
+  });
+  $('.menuLink1').on('click', function(event) {
+    $('#navDropdownMenu').slideToggle();
+    // event.stopPropagation(); // Prevents the click from bubbling up
+  });
+  $(document).on('click', function(event) {
+    if (!$('.dashboard_bar').is(event.target) && $('.dashboard_bar').has(event.target).length === 0) {
+      $('#navDropdownMenu').slideUp();
+    }
+  });
+})
+  // $(document).ready(function(){
+  //   $('#main-wrapper').on('click',function(){
+  //     console.log('enter in ha=mburg')
+  //     // $('.dropdown').slideToggle();
+  //     // $('.dropdown').show();
+  //     $('.dropdown').hide();
+  //   });
+  //   // $('#body').on(click, function(){
+  //   //   $('.dropdown').slideUp();
+  //   // })
+  // })
+
+    // Example: Set the temperature to 75°C
+    
+
+  const body = document.getElementById("body");
+  var value = body.getAttribute("data-theme-version");
+  $(document).ready(function(){
+    $("#themeChange").click(function(){
+      // debugger;
+      if(value == "light"){
+        value = 'dark';
+      }
+      else {
+        value = 'light';
+      }
+      const theme = window.matchMedia('(prefers-color-scheme: '+ value +')').matches ? 'dark' : 'light'
+      document.documentElement.setAttribute('data-theme-version', theme)
+      body.setAttribute("data-theme-version", value);
+
+      // $("#icon-dark").css({
+      //   'display': 'block'
+      // })
+
+    })
+  })
+  
+
+  // const theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light'
+  // document.documentElement.setAttribute('data-theme', theme)
+  
+</script>
+<script src="assets/vendor/global/global.min.js"></script>
+<script src="assets/vendor/chart-js/chart.bundle.min.js"></script>
+<script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="assets/vendor/apexchart/apexchart.js"></script>
+<script src="assets/vendor/morris/morris.min.js"></script>
+<script src="assets/js/plugins-init/morris-init.js"></script>
+
+<script src="assets/js/dashboard/dashboard-1.js"></script>
+<script src="assets/vendor/draggable/draggable.js"></script>
+<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+<script src="assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.buttons.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.html5.min.js"></script>
+<script src="assets/vendor/datatables/js/jszip.min.js"></script>
+<script src="assets/js/plugins-init/datatables.init.js"></script>
+
+
+<script src="assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+<script src="assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script src="assets/vendor/jqvmap/js/jquery.vmap.min.js"></script>
+<script src="assets/vendor/jqvmap/js/jquery.vmap.world.js"></script>
+<script src="assets/vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+<script src="assets/js/custom.min.js"></script>
+<script src="assets/js/demo.js"></script>
+<script src="assets/js/styleSwitcher.js"></script>
+<script src="assets/js/deznav-init.js"></script>
+<!-- <script src="assets/js/metisMenu.js"></script> -->
+</html>
